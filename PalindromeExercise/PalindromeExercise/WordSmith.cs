@@ -10,9 +10,11 @@ namespace PalindromeExercise
 
         public bool IsAPalindrome(string input)
         {
-            var org = input.Replace(" ", "").ToLower();
-            var rev = input.Replace(" ", "").ToLower().Reverse().ToArray();
-            return org == new string(rev);
+            //var org = input.Replace(" ", "").ToLower();
+            //var rev = input.Replace(" ", "").ToLower().Reverse().ToArray();
+            //return org == new string(rev);
+
+            return input.Replace(" ", "").ToLower().SequenceEqual(input.Replace(" ", "").ToLower().Reverse());
         }
     }
 }
